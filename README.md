@@ -3,7 +3,10 @@ Augmented Reality Sudokusolver with OpenCV
 
 ## Setup:
 1) Install Python >= 3.8
-2) Install requirements ($pip install -r requirements.txt)
+2) Install requirements
+´´´ 
+$pip install -r requirements.txt 
+´´´
 
 ## Run script for images:
 Run the main script:
