@@ -16,7 +16,7 @@ def detect_sudoku_on_image(image_path, font_scale_divisor = 3.5, deskew = False,
     start_time = time.time()
 
     grid = preprcessor.get_grid(img, show)
-    print(grid)
+    #print(grid)
     clues = grid.copy()
     sudoku = Sudoku(clues)
     sudoku.solve("backtrack", max_iterations=1e6)
