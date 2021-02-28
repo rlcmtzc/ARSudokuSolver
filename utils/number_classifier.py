@@ -97,20 +97,14 @@ class NumberClassifier():
 
     def train(self):
         print("Start Training")
-        # Set up SVM for OpenCV 3
         self._svm = cv2.ml.SVM_create()
-        # Set SVM type
         self._svm.setType(cv2.ml.SVM_C_SVC)
-        # Set SVM Kernel to Radial Basis Function (RBF) 
         self._svm.setKernel(cv2.ml.SVM_RBF)
-        # Set parameter C
         C = 100
         gamma = 0.9
         self._svm.setC(C)
-        # Set parameter Gamma
         self._svm.setGamma(gamma)
 
-        # Train SVM on training data  
         self._svm.train(np.array(self._train_data), cv2.ml.ROW_SAMPLE, np.array(self._train_labels))
         self._svm.save("Data/model.xml")
 
